@@ -42,9 +42,9 @@ fi
 rsync -a --delete --exclude '**/.git' --delete-excluded $SOURCEDIR/ ./
 
 # Override perl from AliEn-Runtime
-mkdir -p fakeperl/bin
-ln -nfs /usr/bin/perl fakeperl/bin/perl
-export PATH="$PWD/fakeperl/bin:$PATH"
+#mkdir -p fakeperl/bin
+#ln -nfs /usr/bin/perl fakeperl/bin/perl
+#export PATH="$PWD/fakeperl/bin:$PATH"
 
 # special treatment for ThePEG version used for DIPSY
 if [[ "$PKGVERSION" =~ "v2015-08-11" ]]; then
